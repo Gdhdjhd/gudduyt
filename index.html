@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Website</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    header nav ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('https://via.placeholder.com/1500x500'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    /* Service Section */
+    .services {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 20px;
+      background-color: #f4f4f4;
+    }
+
+    .services .service {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+    }
+
+    .services .service h3 {
+      margin-bottom: 15px;
+    }
+
+    .services .service p {
+      font-size: 16px;
+    }
+
+    /* Schedule Section */
+    .schedule {
+      padding: 50px 20px;
+    }
+
+    .schedule h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .schedule table {
+      width: 100%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    .schedule th, .schedule td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    /* Contact Form */
+    .contact {
+      background-color: #333;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact form input,
+    .contact form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .contact form button:hover {
+      background-color: #45a049;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header nav ul {
+        flex-direction: column;
+      }
+
+      .services {
+        flex-direction: column;
+      }
+
+      .services .service {
+        width: 80%;
+        margin: 20px auto;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .services .service {
+        width: 90%;
+      }
+
+      .contact form button {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Our Gym</h1>
+    <p>Your fitness journey starts here</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="service">
+      <h3>Personal Training</h3>
+      <p>Work with a certified personal trainer to reach your fitness goals faster.</p>
+    </div>
+    <div class="service">
+      <h3>Group Classes</h3>
+      <p>Join our group classes for a fun and motivating workout experience.</p>
+    </div>
+    <div class="service">
+      <h3>24/7 Access</h3>
+      <p>Our gym is open 24/7 so you can work out whenever it’s convenient for you.</p>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="schedule">
+    <h2>Class Schedule</h2>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Class</th>
+        <th>Time</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Yoga</td>
+        <td>9:00 AM</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Pilates</td>
+        <td>10:00 AM</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Zumba</td>
+        <td>6:00 PM</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
